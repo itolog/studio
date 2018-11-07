@@ -1,0 +1,54 @@
+@import "../../assets/scss/mixins.scss";
+.page-2 {
+  background-image: url("../../assets/images/fon2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.page-2__wrapp {
+  display: flex;
+  justify-content: center;
+  @include sizes();
+}
+.page-2__content {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  width: 90%;
+  text-align: left;
+  color: white;
+  @include phones() {
+    width: 100%;
+    padding: 0 2% 0px 2%;
+  }
+}
+.page-2__title {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-100vh);
+  margin: 0;
+  &:after {
+    @include afterLineWhite(160px, center);
+  }
+  @include phones() {
+    font-size: 30px;
+    &:after {
+      width: 140px;
+    }
+  }
+}
+.animDiv {
+  opacity: 0;
+  transform: translateX(150vw);
+}
+.page-2__content__text {
+  margin-bottom: 0;
+  font-size: 28px;
+  @include tablets() {
+    font-size: 22px;
+  }
+  @include phones() {
+    font-size: 17px;
+  }
+}

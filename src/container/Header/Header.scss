@@ -1,0 +1,141 @@
+@import "../../assets/scss/mixins.scss";
+.page-1 {
+  display: flex;
+  background-image: url("../../assets/images/fon1.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #0f2c53;
+}
+.page-1-wrapp {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 100vh;
+  justify-content: flex-end;
+  @include sizes();
+}
+// LOGO
+.page-1__logo {
+  position: absolute;
+  z-index: -1;
+  bottom: -13px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+}
+.page-1__logo__img {
+  width: 100%;
+  height: auto;
+}
+// content
+.page-1__content {
+  display: flex;
+  flex-flow: column;
+  text-align: right;
+  margin-right: 50px;
+  align-self: center;
+  @include phones() {
+    margin-right: 0px;
+    padding: 0 10px 0 10px;
+  }
+}
+.page-1__content__title {
+  display: flex;
+  flex-flow: column;
+  text-align: right;
+  font-weight: normal;
+  &:after {
+    @include afterLine(100%, flex-end);
+  }
+  @include phones() {
+    &:after {
+      @include afterLine(85%, flex-end);
+    }
+  }
+}
+.page-1__content__text {
+  font-size: 36px;
+  @include phones() {
+    font-size: 26px;
+  }
+}
+// Actions btn
+.page-1__action__btn {
+  font-size: 30px;
+  display: flex;
+  @include phones() {
+    padding: 0;
+    font-size: 17px;
+  }
+}
+.page-1__action__li {
+  flex: 1;
+  padding: 2% 0;
+  background: #fd9c2a;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 10px;
+  a {
+    color: #0f2c53;
+    font-family: "Open Sans", sans-serif;
+  }
+  &:hover {
+    background: #ffc058;
+  }
+}
+.page-1__action__li_left {
+  border-right: 1px solid grey;
+}
+// Anim Cristals
+.cris1,
+.cris2,
+.cris3 {
+  position: absolute;
+}
+
+.cris1 {
+  width: 42px;
+  height: 3.375rem;
+  left: 24%;
+  top: 24%;
+  @include tablets() {
+    width: 2.625rem;
+    height: 6.375rem;
+  }
+  @include phones() {
+    height: 8.375rem;
+    top: 22%;
+  }
+}
+.cris2 {
+  width: 3rem;
+  height: 5.1rem;
+  left: 26%;
+  top: 79%;
+  @include tablets() {
+    width: 3.625rem;
+    height: 10.375rem;
+    left: 24%;
+    top: 81%;
+  }
+  @include phones() {
+    width: 2.625rem;
+    top: 80%;
+  }
+}
+.cris3 {
+  width: 3.625rem;
+  height: 4.375rem;
+  left: 25%;
+  top: 90%;
+  @include tablets() {
+    width: 3.625rem;
+    height: 8.375rem;
+    left: 24%;
+    top: 90%;
+  }
+  @include phones() {
+    height: 7.375rem;
+    width: 2.625rem;
+  }
+}

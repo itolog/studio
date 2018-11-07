@@ -1,0 +1,43 @@
+//media query
+@mixin desktop() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phones() {
+  @media screen and (max-width: 474px) {
+    @content;
+  }
+}
+// after
+@mixin afterLine($width, $pos) {
+  content: "";
+  display: block;
+  width: $width;
+  align-self: $pos;
+  height: 8px;
+  border-bottom: 5px dashed #0f2c53;
+}
+@mixin afterLineWhite($width, $pos) {
+  content: "";
+  display: block;
+  width: $width;
+  align-self: $pos;
+  height: 8px;
+  border-bottom: 5px dashed white;
+}
+@mixin sizes() {
+  // height: 100vh;
+  max-width: 1600px;
+  margin: auto;
+}
