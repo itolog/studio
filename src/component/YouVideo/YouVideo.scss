@@ -1,0 +1,23 @@
+.you-video {
+  height: 100%;
+  border: 5px solid goldenrod;
+}
+.you-video--content {
+  height: 75%;
+}
+.you-video--load {
+  position: relative;
+  z-index: 1;
+  top: 100px;
+  left: 10%;
+  color: wheat;
+  font-size: 40px;
+}
+.you-video--iframe {
+  position: relative;
+  z-index: 2;
+}
+
+.you-video--info {
+  color: gainsboro;
+}

@@ -38,6 +38,9 @@
       width: 140px;
     }
   }
+  @include small() {
+    font-size: 26px;
+  }
 }
 .animDiv {
   opacity: 0;
@@ -51,5 +54,8 @@
   }
   @include phones() {
     font-size: 17px;
+  }
+  @include small() {
+    font-size: 16px;
   }
 }

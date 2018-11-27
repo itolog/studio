@@ -1,36 +1,32 @@
 import React from "react";
+
 import "./Video.scss";
+import YouVideo from "../YouVideo/YouVideo";
 
 const Video = () => {
   return (
     <section className="section video-section" id="#video">
       <div className="slide slide-section--item" data-anchor="slide1">
-        <span className="slide-section--load">LOADING...</span>
-        <iframe
-          className="slide-section--iframe"
-          width="100%"
-          height="85%"
-          data-src="https://www.youtube.com/embed/aJWqnpJVFiM"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="React Native"
-        />
-        <span className="slide-section--info">RN</span>
+        <div className="video-section--content">
+          <YouVideo
+            url="https://www.youtube.com/embed/aJWqnpJVFiM"
+            title="React Native"
+          />
+          <a className="video-section--upp" href="#values">
+            вверх
+          </a>
+        </div>
       </div>
       <div className="slide slide-section--item" data-anchor="slide2">
-        <span className="slide-section--load">LOADING...</span>
-        <iframe
-          className="slide-section--iframe"
-          width="100%"
-          height="80%"
-          data-src="https://www.youtube.com/embed/oBkcozjgtuA"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="Rock`n scroll"
-        />
-        <span className="slide-section--info">Rock`n scroll</span>
+        <div className="video-section--content">
+          <YouVideo
+            url="https://www.youtube.com/embed/oBkcozjgtuA"
+            title="Rock`n scroll"
+          />
+          <a className="video-section--upp" href="#values">
+            вверх
+          </a>
+        </div>
       </div>
     </section>
   );
