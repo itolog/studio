@@ -89,14 +89,14 @@
   position: relative;
   width: 90px;
   height: 80px;
-  // background: url('./../../img/css_sprites1.png');
-  // background-size: 16.375rem 9.375rem;
-  // background-repeat: no-repeat;
-  // @include phones() {
-  //   width: 7.575rem;
-  //   height: 5rem;
-  //   background-size: 14.375rem 8.375rem;
-  // }
+  @include phones() {
+    width: 70px;
+    height: 70px;
+  }
+  @include small() {
+    width: 60px;
+    height: 60px;
+  }
 }
 .clock {
   background: url("../../assets/images/svg/time-passing.svg") 100% 100%
