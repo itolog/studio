@@ -1,0 +1,111 @@
+@import "../../assets/scss/mixins.scss";
+
+.page-3 {
+  background-image: url("../../assets/images/fon3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.page-3__wrapp {
+  display: flex;
+  flex-flow: column;
+  color: white;
+  height: 100vh;
+  justify-content: center;
+  @include sizes();
+}
+.page-2__title__values {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-100%);
+  padding: 0 0 2% 0;
+  &:after {
+    @include afterLineWhite(29.375rem, center);
+  }
+  @include phones() {
+    font-size: 25px;
+    padding: 0 0 3% 0;
+    &::after {
+      width: 15.25rem;
+    }
+  }
+}
+.page-3__ul {
+  padding: 0;
+}
+.page-3__li {
+  display: flex;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(-100%);
+  padding: 0 1% 0 1%;
+  @include phones() {
+    padding: 0 1% 3% 1%;
+  }
+}
+.page-3__li_right {
+  display: flex;
+  flex-flow: row-reverse;
+  text-align: right;
+}
+.page-3__li__text {
+  padding: 0px 10px 0px 20px;
+  width: 60%;
+  @include phones() {
+    width: 100%;
+  }
+}
+.page-3__li__text__title {
+  margin: 0 0 1% 0;
+  // font-size: 40px;
+  @include tablets() {
+    font-size: 28px;
+  }
+  @include phones() {
+    font-size: 20px;
+  }
+}
+.page-3__li__paragraf {
+  margin: 5px 0px 0px 0px;
+  // font-size: 30px;
+  @include tablets() {
+    font-size: 20px;
+  }
+  @include phones() {
+    font-size: 12px;
+  }
+}
+
+// IMaGe
+.page-3__li__logo {
+  position: relative;
+  width: 90px;
+  height: 80px;
+  // background: url('./../../img/css_sprites1.png');
+  // background-size: 16.375rem 9.375rem;
+  // background-repeat: no-repeat;
+  // @include phones() {
+  //   width: 7.575rem;
+  //   height: 5rem;
+  //   background-size: 14.375rem 8.375rem;
+  // }
+}
+.clock {
+  background: url("../../assets/images/svg/time-passing.svg") 100% 100%
+    no-repeat;
+}
+.eye {
+  background: url("../../assets/images/svg/eye-open.svg") 100% 100% no-repeat;
+}
+.brain {
+  background: url("../../assets/images/svg/brain.svg") 100% 100% no-repeat;
+}
+.check {
+  background: url("../../assets/images/svg/checked.svg") 100% 100% no-repeat;
+}
+.copy {
+  background: url("../../assets/images/svg/copyright-symbol.svg") 100% 100%
+    no-repeat;
+}

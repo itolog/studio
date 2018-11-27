@@ -25,12 +25,12 @@ class About extends PureComponent {
         ease: Back.easeOut.config(1.7)
       })
       .to(this.text.current, 1.5, {
-        x: 0,
+        y: 0,
         opacity: 1,
         ease: Bounce.easeOut
       });
   };
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     // Typical usage (don't forget to compare props):
     if (this.props.loadAbout === true) {
       this.animate();

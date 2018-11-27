@@ -79,8 +79,8 @@ class Header extends PureComponent {
                   </a>
                 </li>
                 <li className="page-1__action__li">
-                  <a className="page-1__action__href" href="#/">
-                    Связатся с нами
+                  <a className="page-1__action__href" href="#video">
+                    Доклады IT.
                   </a>
                 </li>
               </ul>

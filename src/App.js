@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { connect } from "react-redux";
-import { loadedHeader, loadedAbout } from "./store/actions";
+import { loadedHeader, loadedAbout, loadedThird } from "./store/actions";
 
 import "./App.scss";
 import Header from "./container/Header/Header";
 import About from "./container/About/About";
+import Values from "./container/Values/Values";
+import Video from "./component/Video/Video";
 
 class App extends Component {
   constructor(props) {
@@ -17,26 +19,26 @@ class App extends Component {
 
   options = {
     licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
-    anchors: ["firstPage", "secondPage", "thirdPage"]
+    anchors: ["home", "about", "values", "video"],
+    verticalCentered: false,
+    fitToSection: false,
+    lazyLoading: true,
+    // showActiveTooltip: true,
+    slidesNavigation: true,
+    slidesNavPosition: "bottom",
+    controlArrows: false
   };
 
   afterLoad(origin, destination, direction) {
     //using anchorLink
-    if (destination.anchor === "firstPage") {
+    if (destination.anchor === "home") {
       this.props.loadedHeader();
-    } else if (destination.anchor === "secondPage") {
+    } else if (destination.anchor === "about") {
       this.props.loadedAbout();
+    } else if (destination.anchor === "values") {
+      this.props.loadedThird();
     }
   }
-
-  // onLeave(origin, destination, direction) {
-  //   //using anchorLink
-  //   if (origin.index === 0) {
-  //     this.props.unLoaded();
-  //   } else if (origin.index === 1) {
-  //     this.props.unLoaded();
-  //   }
-  // }
 
   componentDidMount() {
     this.setState({ contentLoad: true });
@@ -66,11 +68,9 @@ class App extends Component {
             return (
               <ReactFullpage.Wrapper>
                 <Header />
-
                 <About />
-                <div className="section">
-                  <h3>Section 3</h3>
-                </div>
+                <Values />
+                <Video />
               </ReactFullpage.Wrapper>
             );
           }}
@@ -83,13 +83,15 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     loadHeader: state.headReducer.loadHeader,
-    loadAbout: state.headReducer.loadAbout
+    loadAbout: state.headReducer.loadAbout,
+    loadedThird: state.headReducer.loadedThird
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   loadedHeader: () => dispatch(loadedHeader()),
-  loadedAbout: () => dispatch(loadedAbout())
+  loadedAbout: () => dispatch(loadedAbout()),
+  loadedThird: () => dispatch(loadedThird())
 });
 
 export default connect(

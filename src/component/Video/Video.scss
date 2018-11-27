@@ -1,0 +1,22 @@
+.slide {
+  background: #000;
+}
+.slide-section--load {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 10%;
+  color: wheat;
+  font-size: 40px;
+}
+.slide-section--iframe {
+  position: relative;
+  z-index: 2;
+}
+
+.fp-slidesNav ul li a span {
+  background: antiquewhite;
+}
+.slide-section--info {
+  color: gainsboro;
+}
