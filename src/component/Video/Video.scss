@@ -1,3 +1,5 @@
+@import "../../assets/scss/mixins.scss";
+
 .slide {
   background: #000;
   height: 100%;
@@ -10,14 +12,19 @@
 }
 
 .fp-slidesNav ul li a span {
-  background: antiquewhite;
+  background: aquamarine;
 }
-
+.fp-slidesNav .fp-bottom {
+  background: aquamarine;
+}
 .video-section--content {
   width: 95%;
-  height: 75%;
+  height: 70%;
   margin: 0 auto;
   padding-top: 10px;
+  @include phones() {
+    height: 60%;
+  }
 }
 
 // BUTTON UPP
@@ -29,10 +36,4 @@
   margin-top: 20px;
   font-size: 22px;
   font-weight: bold;
-}
-
-@media (orientation: landscape) {
-  .video-section--content {
-    height: 60%;
-  }
 }
